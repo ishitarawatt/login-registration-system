@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(120deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 380px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.30); /* fallback */
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+
+  /* Glass effect */
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
+  /* Extra polish */
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+}
+
+/* Browser fallback (VERY IMPORTANT) */
+@supports not (backdrop-filter: blur(12px)) {
+  .card {
+    background: rgba(255, 255, 255, 0.45);
+  }
+}
+
+
+.card h2 {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box span {
+  position: absolute;
+  right: 15px;
+  top: 14px;
+  cursor: pointer;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 30px;
+  background: #ffd86f;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.switch {
+  margin-top: 15px;
+}
+
+.switch a {
+  color: #ffd86f;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#error {
+  color: #ffdddd;
+  font-size: 14px;
+}
